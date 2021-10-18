@@ -34,7 +34,9 @@ document.getElementById("id")
 
 ***EXAMPLE***
 
-> Show "Hello World" text into div
+<h3 style="border-left: 5px solid navy;">
+Show "Hello World" text into div
+</h3>
 
 ```html
 <div id="hello"></div>
@@ -42,3 +44,5 @@ document.getElementById("id")
 ```javascript
 document.getElementById("hello").innerHTML = "Hello World!!!";
 ```
+
+`code`
