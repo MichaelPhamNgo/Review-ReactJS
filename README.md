@@ -24,25 +24,19 @@ When a webpage is loaded, the browser will create a **Document Object Model** ca
 ```
 
 
-II.1 Find HTML elements
+## II.1 Find HTML elements
 > Find an element by element id
 
-SYNTAX
+***SYNTAX***
 ```javascript
 document.getElementById("id")
 ```
 
 ***EXAMPLE***
-
-<h3 style="border-left: 5px solid navy;">
-Show "Hello World" text into div
-</h3>
-
 ```html
 <div id="hello"></div>
 ```
 ```javascript
+//ex: show "Hello World" text into div
 document.getElementById("hello").innerHTML = "Hello World!!!";
 ```
-
-`code`
