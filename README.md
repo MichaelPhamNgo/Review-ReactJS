@@ -9,13 +9,13 @@ Table of React JS content
 [II1. ] [II2. ] 
 [VI. JSX]
 
-II. JS HTML DOM
+# II. JS HTML DOM
 When a webpage is loaded, the browser will create a **Document Object Model** called DOM. The HTML elements are ***object***. Each HTML element contains properties and events and is managed by DOM, so the HTML DOM can *get, change, add, or delete* HTML elements.
 
 - HTML DOM methods are actions
 - HTML DOM properties are values
 
-***EXAMPLE**
+***EXAMPLE***
 
 ```javascript
 <script>
@@ -34,11 +34,11 @@ document.getElementById("id")
 
 ***EXAMPLE***
 
-> ex: show "Hello World" text into div
+> Show "Hello World" text into div
 
 ```html
 <div id="hello"></div>
 ```
 ```javascript
-document.getElementById("hello").innerHTML = "Hello World";
+document.getElementById("hello").innerHTML = "Hello World!!!";
 ```
