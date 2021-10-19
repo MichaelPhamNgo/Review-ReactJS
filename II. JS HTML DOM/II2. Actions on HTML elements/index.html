@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actions on HTML elements</title>
+    <style type="text/css">
+        button[type="button"] {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="demo-innerHTML"></div>
+    <div id="demo-property" >Hello Property</div>
+    <button type="button" id="demo-addEventListener">Click Me</button>
+    <button type="button" id="demo-appendChild">Add A Last Node</button>
+    <ul id="myList-appendChild">
+        <li>Node 1</li>
+        <li>Node 2</li>
+    </ul>
+    <button type="button" id="demo-childNodes">Show list of child nodes</button>
+    <ul id="myList-childNodes">
+        <li>Node 1</li>
+        <li>Node 2</li>
+    </ul>
+    <script type="text/javascript">
+        //innerHTML example
+        document.getElementById("demo-innerHTML").innerHTML = "Hello innerHTML";        
+
+        //stlye.property example
+        document.getElementById("demo-property").style.color = "blue";
+
+        //addEventListener example
+        document.getElementById("demo-addEventListener").addEventListener("click", function(){
+            this.innerHTML = "Hello addEventListener";
+        });
+
+        //appendChild example
+        document.getElementById("demo-appendChild").addEventListener("click", function(){
+            //create node li
+            let node = document.createElement("li");
+            //create text for li node
+            let textNode = document.createTextNode("Node 3");
+            //add text to li node
+            node.appendChild(textNode);
+            //add li to ul#myList
+            document.getElementById("myList-appendChild").appendChild(node);
+        });
+
+        //childNodes example
+        document.getElementById("demo-childNodes").addEventListener("click", function(){
+            console.log(document.getElementById("myList-childNodes").childNodes);
+        });
+    </script>
+</body>
+</html>

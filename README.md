@@ -13,6 +13,10 @@
     - [querySelectorAll](#queryselectorall)
   - [II.2 Actions on HTML elements](#ii2-actions-on-html-elements)
     - [innerHTML](#innerhtml)
+    - [style.property](#styleproperty)
+    - [addEventListener](#addeventlistener)
+    - [appendChild](#appendchild)
+    - [childNodes](#childnodes)
 
 # I. Single Page Application vs Multiple Page Application 
 # I.1 Single Page Application 
@@ -174,74 +178,119 @@ for(let p of ps){
 
 ***SYNTAX***
 ```javascript
-document.getElementById(id).innerHTML = 'new HTML';
-document.getElementsByClassName(className).innerHTML = 'new HTML';
+// Set the innerHTML property:
+HTMLElementObject.innerHTML = text
+
+// Return the innerHTML property
+HTMLElementObject.innerHTML;
 ...
 ```
 
 ***EXAMPLE***
 ```html
-<div id="change-html-content"></div>
+<div id="demo-innerHTML"></div>
 ```
 ```javascript
-//ex: show "Hello getElementById" text into div
-document.getElementById("change-html-content").innerHTML = "Change HTML Content";
+//ex: show "Hello innerHTML"
+document.getElementById("demo-innerHTML").innerHTML = "Hello innerHTML";
 ```
 
-> Change value of an atrribute
-
-***SYNTAX***
-```javascript
-document.getElementById(id).'attribute'  = 'new value';
-document.getElementsByClassName(className).'attribute' = 'new value';
-...
-```
-
-***EXAMPLE***
-```html
-<img id="change-value-attribute" />
-```
-```javascript
-//ex: show "Hello getElementById" text into div
-document.getElementById("change-value-attribute").src = "https://www.w3schools.com/js/pic_htmltree.gif";
-```
-
+### style.property
 > Change HTML style
 
 ***SYNTAX***
 ```javascript
-document.getElementById(id).style.'property'  = 'new style';
-document.getElementsByClassName(className).style.'property' = 'new style';
+// Set style properties
+element.style.property = value
+
+// Return style properties
+element.style.property
 ...
 ```
 
 ***EXAMPLE***
 ```html
-<div id="change-property" >Change color of the text</div>
+<div id="demo-property" >Hello Property</div>
 ```
 ```javascript
 //ex: show "Hello getElementById" text into div
-document.getElementById("change-property").style.color = "blue";
+document.getElementById("demo-property").style.color = "blue";
 ```
 
-> Action Events
+### addEventListener
+> Adds an event handler to the specified element
 
 ***SYNTAX***
 ```javascript
-document.getElementById(id).'onActionEvent'  = 'function';
-document.getElementsByClassName(className).'onActionEvent'  = 'function';
+element.addEventListener(event, function, useCapture)
 ...
 ```
 
 ***EXAMPLE***
 ```html
-<button type="button" id="myBtn">Click Me</button>
+<button type="button" id="demo-addEventListener">Click Me</button>
 ```
 ```javascript
 //ex: change the text of the button
-document.getElementById("myBtn").onclick = function() {
-    this.innerHTML = "You clicked on me";
-}
+document.getElementById("demo-addEventListener").addEventListener("click", function(){
+    this.innerHTML = "Hello addEventListener";
+});
+```
+
+### appendChild
+> Appends a node as the last child of a node
+
+***SYNTAX***
+```javascript
+node.appendChild(node)
+...
+```
+
+***EXAMPLE***
+```html
+<button type="button" id="demo-appendChild">Add A Last Node</button>
+<ul id="myList-appendChild">
+    <li>Node 1</li>
+    <li>Node 2</li>
+</ul>
+```
+```javascript
+//ex: add li node to ul#myList-appendChild
+document.getElementById("demo-appendChild").addEventListener("click", function(){
+    //create node li
+    let node = document.createElement("li");
+    //create text for li node
+    let textNode = document.createTextNode("Node 3");
+    //add text to li node
+    node.appendChild(textNode);
+    //add li to ul#myList-appendChild
+    document.getElementById("myList-appendChild").appendChild(node);
+});
+```
+
+### childNodes
+> Show list of child nodes
+
+***SYNTAX***
+```javascript
+element.childNodes
+...
+```
+
+***EXAMPLE***
+```html
+<button type="button" id="demo-childNodes">Show list of child nodes</button>
+<ul id="myList-childNodes">
+    <li>Node 1</li>
+    <li>Node 2</li>
+</ul>
+```
+```javascript
+//ex: show childNodes
+document.getElementById("demo-childNodes").addEventListener("click", function(){
+    console.log(document.getElementById("myList-childNodes").childNodes);       
+    //NodeList(5) [text, li, text, li, text]
+});
 ```
 
 ***NOTE***
@@ -254,11 +303,7 @@ document.getElementById("myBtn").onclick = function() {
     <tr>
         <td>innerHTML</td>
         <td>Change the inner HTML of an element</td>        
-    </tr>
-    <tr>
-        <td>attribute</td>
-        <td>Change the attribute value of an HTML element</td>        
-    </tr>
+    </tr>    
     <tr>
         <td>style.property</td>
         <td>Change the style of an HTML element</td>        
