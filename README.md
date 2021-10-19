@@ -11,6 +11,7 @@
       - [getElementsByClassName](#getelementsbyclassname)
       - [querySelector](#queryselector)
       - [querySelectorAll](#queryselectorall)
+  - [</table>](#table)
   - [II.2 Actions on HTML elements](#ii2-actions-on-html-elements)
   - [See more action events](#see-more-action-events)
 
@@ -37,33 +38,6 @@ When a webpage is loaded, the browser will create a **Document Object Model** ca
 
 
 ## II.1 Finding HTML Elements
-
-<table>
-    <tr>
-        <th>Method</th>
-        <th>Description</th>        
-    </tr>
-    <tr>
-        <td>[getElememtById](#getelememtbyid)</td>
-        <td>Find an element by element id</td>        
-    </tr>
-    <tr>
-        <td>[getElementsByTagName](#getelementsbytagname)</td>
-        <td>Find elements by tag name</td>        
-    </tr>
-    <tr>
-        <td>[getElementsByClassName](#getelementsbyclassname)</td>
-        <td>Find elements by class name</td>        
-    </tr>
-    <tr>
-        <td>[querySelector](#queryselector)</td>
-        <td>Find a selector</td>        
-    </tr>
-    <tr>
-        <td>[querySelectorAll](#queryselectorall)</td>
-        <td>Find all selectors</td>        
-    </tr>
-</table>
 
 #### getElememtById
 > Find an element by element id
@@ -164,6 +138,37 @@ for(let p of ps){
 	p.innerHTML = "Hello querySelectorAll";
 }   
 ``` 
+
+---
+***NOTE***
+<table>
+    <tr>
+        <th>Method</th>
+        <th>Description</th>        
+    </tr>
+    <tr>
+        <td>getelememtbyid</td>
+        <td>Find an element by element id</td>        
+    </tr>
+    <tr>
+        <td>getelementsbytagname</td>
+        <td>Find elements by tag name</td>        
+    </tr>
+    <tr>
+        <td>getelementsbyclassname</td>
+        <td>Find elements by class name</td>        
+    </tr>
+    <tr>
+        <td>queryselector</td>
+        <td>Find a selector</td>        
+    </tr>
+    <tr>
+        <td>queryselectorall</td>
+        <td>Find all selectors</td>        
+    </tr>
+</table>
+---
+
 
 ## II.2 Actions on HTML elements
 
