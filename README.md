@@ -6,12 +6,11 @@
 - [I.2 Multiple Page Application](#i2-multiple-page-application)
 - [II. JS HTML DOM](#ii-js-html-dom)
   - [II.1 Finding HTML Elements](#ii1-finding-html-elements)
-      - [getElememtById](#getelememtbyid)
-      - [getElementsByTagName](#getelementsbytagname)
-      - [getElementsByClassName](#getelementsbyclassname)
-      - [querySelector](#queryselector)
-      - [querySelectorAll](#queryselectorall)
-  - [</table>](#table)
+    - [getElememtById](#getelememtbyid)
+    - [getElementsByTagName](#getelementsbytagname)
+    - [getElementsByClassName](#getelementsbyclassname)
+    - [querySelector](#queryselector)
+    - [querySelectorAll](#queryselectorall)
   - [II.2 Actions on HTML elements](#ii2-actions-on-html-elements)
   - [See more action events](#see-more-action-events)
 
@@ -39,7 +38,7 @@ When a webpage is loaded, the browser will create a **Document Object Model** ca
 
 ## II.1 Finding HTML Elements
 
-#### getElememtById
+### getElememtById
 > Find an element by element id
 
 ***SYNTAX***
@@ -56,7 +55,7 @@ document.getElementById("id")
 document.getElementById("ex-id").innerHTML = "Hello getElementById";
 ```
 
-#### getElementsByTagName
+### getElementsByTagName
 > Find an element by class name
 
 ***SYNTAX***
@@ -78,7 +77,7 @@ for(let exClass of exClasses){
 }        
 ```
 
-#### getElementsByClassName
+### getElementsByClassName
 > Find an element by tag name
 
 ***SYNTAX***
@@ -100,7 +99,7 @@ for(let h4 of h4s){
 }     
 ```
 
-#### querySelector
+### querySelector
 > Find an element by CSS Selector
 ***SYNTAX***
 ```javascript
@@ -118,7 +117,7 @@ document.querySelector("selector")		//selector can be id, tag, or class
 document.querySelector(".selector").innerHTML = "Hello querySelector";
 ``` 
 
-#### querySelectorAll
+### querySelectorAll
 > Find an element by CSS Selectors
 ***SYNTAX***
 ```javascript
@@ -139,7 +138,6 @@ for(let p of ps){
 }   
 ``` 
 
----
 ***NOTE***
 <table>
     <tr>
@@ -167,7 +165,6 @@ for(let p of ps){
         <td>Find all selectors</td>        
     </tr>
 </table>
----
 
 
 ## II.2 Actions on HTML elements
