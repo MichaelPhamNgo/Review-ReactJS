@@ -12,7 +12,7 @@
     - [querySelector](#queryselector)
     - [querySelectorAll](#queryselectorall)
   - [II.2 Actions on HTML elements](#ii2-actions-on-html-elements)
-  - [See more action events](#see-more-action-events)
+    - [innerHTML](#innerhtml)
 
 # I. Single Page Application vs Multiple Page Application 
 # I.1 Single Page Application 
@@ -169,229 +169,7 @@ for(let p of ps){
 
 ## II.2 Actions on HTML elements
 
-<table>
-    <tr>
-        <th>Property</th>
-        <th>Description</th>
-        <th>Syntax</th>
-    </tr>
-    <tr>
-        <td>innerHTML</td>
-        <td>Change the inner HTML of an element</td>
-        <td>element.innerHTML =  new html content</td>
-    </tr>
-    <tr>
-        <td>attribute</td>
-        <td>Change the attribute value of an HTML element</td>
-        <td>element.attribute = new value</td>
-    </tr>
-    <tr>
-        <td>style.property</td>
-        <td>Change the style of an HTML element</td>
-        <td>element.style.property = new style</td>
-    </tr>
-    <tr>
-        <td>addEventListener</td>
-        <td>Attaches an event handler to the specified element</td>
-        <td>element.addEventListener(event, function, useCapture)</td>
-    </tr>
-    <tr>
-        <td>appendChild</td>
-        <td>Appends a node as the last child of a node</td>
-        <td>node.appendChild(node)</td>
-    </tr>    
-    <tr>
-        <td>childNodes</td>
-        <td>Returns a collection of a node's child nodes</td>
-        <td>element.childNodes</td>
-    </tr>
-    <tr>
-        <td>children</td>
-        <td>Returns a collection of an element's child elements, as an HTMLCollection object</td>
-        <td>element.children</td>
-    </tr>
-    <tr>
-        <td>classList</td>
-        <td>Returns the class name(s) of an element</td>
-        <td>element.classList</td>
-    </tr>
-    <tr>
-        <td>click</td>
-        <td>Simulates a mouse-click on an element</td>
-        <td>HTMLElementObject.click()</td>
-    </tr>
-    <tr>
-        <td>firstChild</td>
-        <td>Returns the first child node of the specified node, as a Node object</td>
-        <td>node.firstChild</td>
-    </tr>
-    <tr>
-        <td>firstElementChild</td>
-        <td>Returns the first child element of the specified element</td>
-        <td>element.firstElementChild</td>
-    </tr>
-    <tr>
-        <td>focus</td>
-        <td>Give focus to an element</td>
-        <td>HTMLElementObject.focus()</td>
-    </tr>
-    <tr>
-        <td>getAttribute</td>
-        <td>Returns the value of the attribute with the specified name, of an element</td>
-        <td>element.getAttribute(attributename)</td>
-    </tr>
-    <tr>
-        <td>getAttributeNode</td>
-        <td>Returns the attribute node with the specified name of an element, as an Attr object</td>
-        <td>element.getAttributeNode(attributename)</td>
-    </tr>    
-    <tr>
-        <td>id</td>
-        <td>The id property sets or returns the id of an element</td>
-        <td>HTMLElementObject.id</td>
-    </tr>
-    <tr>
-        <td>innerText</td>
-        <td>Sets or returns the text content of the specified node, and all its descendants</td>
-        <td>node.innerText</td>
-    </tr>
-    <tr>
-        <td>insertBefore</td>
-        <td>Inserts a the specified element into a specified position</td>
-        <td>node.insertAdjacentElement(position, element)</td>
-    </tr>
-    <tr>
-        <td>insertAdjacentHTML</td>
-        <td>Inserts a node as a child, right before an existing child, which you specify</td>
-        <td>node.insertBefore(newnode, existingnode)</td>
-    </tr>
-    <tr>
-        <td>lastChild</td>
-        <td>Returns the last child node of the specified node, as a Node object</td>
-        <td>node.lastChild</td>
-    </tr>
-    <tr>
-        <td>lastElementChild</td>
-        <td>Returns the last child element of the specified element</td>
-        <td>element.lastElementChild</td>
-    </tr>
-    <tr>
-        <td>matches</td>
-        <td>Returns a Boolean value indicating whether an element is matched by a specific CSS selector or not</td>
-        <td>element.matches(selectors)</td>
-    </tr>
-    <tr>
-        <td>nextSibling</td>
-        <td>Returns the node immediately following the specified node, in the same tree level</td>
-        <td>node.nextSibling</td>
-    </tr>
-    <tr>
-        <td>nextElementSibling</td>
-        <td>Returns the element immediately following the specified element, in the same tree level</td>
-        <td>node.nextElementSibling</td>
-    </tr>
-    <tr>
-        <td>nodeName</td>
-        <td>Returns the name of the specified node</td>
-        <td>node.nodeName</td>
-    </tr>
-    <tr>
-        <td>nodeValue</td>
-        <td>Sets or returns the node value of the specified node</td>
-        <td>node.nodeValue</td>
-    </tr>
-    <tr>
-        <td>outerHTML</td>
-        <td>Sets or returns the HTML element and all it's content, including the start tag, it's attributes, and the end tag</td>
-        <td>element.outerHTML</td>
-    </tr>
-    <tr>
-        <td>outerText</td>
-        <td>Sets or returns the text content of the specified node</td>
-        <td>node.outerText</td>
-    </tr>
-    <tr>
-        <td>parentNode</td>
-        <td>Returns the parent node of the specified node, as a Node object</td>
-        <td>node.parentNode</td>
-    </tr>
-    <tr>
-        <td>parentElement</td>
-        <td>Returns the parent element of the specified element</td>
-        <td>node.parentElement</td>
-    </tr>
-    <tr>
-        <td>previousSibling</td>
-        <td>Returns the previous node of the specified node, in the same tree level</td>
-        <td>node.previousSibling</td>
-    </tr>
-    <tr>
-        <td>previousElementSibling</td>
-        <td>Returns the previous element of the specified element, in the same tree level</td>
-        <td>node.previousElementSibling</td>
-    </tr>
-    <tr>
-        <td>remove</td>
-        <td>Removes the specified element from the DOM</td>
-        <td>node.remove()</td>
-    </tr>
-    <tr>
-        <td>removeAttribute</td>
-        <td>Removes the specified attribute from an element</td>
-        <td>element.removeAttribute(attributename)</td>
-    </tr>
-    <tr>
-        <td>removeAttributeNode</td>
-        <td>Removes the specified attribute from an element, and returns the removed attribute, as an Attr Node object</td>
-        <td>element.removeAttributeNode(attributenode)</td>
-    </tr>
-    <tr>
-        <td>removeChild</td>
-        <td>Removes a specified child node of the specified element</td>
-        <td>node.removeChild(node)</td>
-    </tr>
-    <tr>
-        <td>removeEventListener</td>
-        <td>Removes an event handler that has been attached with the addEventListener() method</td>
-        <td>element.removeEventListener(event, function, useCapture)</td>
-    </tr>
-    <tr>
-        <td>removeEventListener</td>
-        <td>Removes an event handler that has been attached with the addEventListener() method</td>
-        <td>element.removeEventListener(event, function, useCapture)</td>
-    </tr>
-    <tr>
-        <td>replaceChild</td>
-        <td>Replaces a child node with a new node</td>
-        <td>node.replaceChild(newnode, oldnode)</td>
-    </tr>
-    <tr>
-        <td>setAttribute</td>
-        <td>Adds the specified attribute to an element, and gives it the specified value</td>
-        <td>element.setAttribute(attributename, attributevalue)</td>
-    </tr>
-    <tr>
-        <td>setAttributeNode</td>
-        <td>Adds the specified attribute node to an element</td>
-        <td>element.setAttributeNode(attributenode)</td>
-    </tr>
-    <tr>
-        <td>tagName</td>
-        <td>Returns the tag name of the element</td>
-        <td>element.tagName</td>
-    </tr>
-    <tr>
-        <td>textContent</td>
-        <td>Sets or returns the text content of the specified node, and all its descendants</td>
-        <td>node.textContent</td>
-    </tr>
-    <tr>
-        <td>title</td>
-        <td>Sets or returns the value of the title attribute of an element</td>
-        <td>HTMLElementObject.title</td>
-    </tr>
-</table>
-
+### innerHTML
 > Change HTML content
 
 ***SYNTAX***
@@ -466,7 +244,183 @@ document.getElementById("myBtn").onclick = function() {
 }
 ```
 
----
 ***NOTE***
-[See more action events](https://www.w3schools.com/jsref/dom_obj_event.asp)
----
+
+<table>
+    <tr>
+        <th>Property</th>
+        <th>Description</th>        
+    </tr>
+    <tr>
+        <td>innerHTML</td>
+        <td>Change the inner HTML of an element</td>        
+    </tr>
+    <tr>
+        <td>attribute</td>
+        <td>Change the attribute value of an HTML element</td>        
+    </tr>
+    <tr>
+        <td>style.property</td>
+        <td>Change the style of an HTML element</td>        
+    </tr>
+    <tr>
+        <td>addEventListener</td>
+        <td>Attaches an event handler to the specified element</td>        
+    </tr>
+    <tr>
+        <td>appendChild</td>
+        <td>Appends a node as the last child of a node</td>        
+    </tr>    
+    <tr>
+        <td>childNodes</td>
+        <td>Returns a collection of a node's child nodes</td>        
+    </tr>
+    <tr>
+        <td>children</td>
+        <td>Returns a collection of an element's child elements, as an HTMLCollection object</td>        
+    </tr>
+    <tr>
+        <td>classList</td>
+        <td>Returns the class name(s) of an element</td>        
+    </tr>
+    <tr>
+        <td>click</td>
+        <td>Simulates a mouse-click on an element</td>        
+    </tr>
+    <tr>
+        <td>firstChild</td>
+        <td>Returns the first child node of the specified node, as a Node object</td>        
+    </tr>
+    <tr>
+        <td>firstElementChild</td>
+        <td>Returns the first child element of the specified element</td>        
+    </tr>
+    <tr>
+        <td>focus</td>
+        <td>Give focus to an element</td>        
+    </tr>
+    <tr>
+        <td>getAttribute</td>
+        <td>Returns the value of the attribute with the specified name, of an element</td>        
+    </tr>
+    <tr>
+        <td>getAttributeNode</td>
+        <td>Returns the attribute node with the specified name of an element, as an Attr object</td>        
+    </tr>    
+    <tr>
+        <td>id</td>
+        <td>The id property sets or returns the id of an element</td>        
+    </tr>
+    <tr>
+        <td>innerText</td>
+        <td>Sets or returns the text content of the specified node, and all its descendants</td>        
+    </tr>
+    <tr>
+        <td>insertBefore</td>
+        <td>Inserts a the specified element into a specified position</td>        
+    </tr>
+    <tr>
+        <td>insertAdjacentHTML</td>
+        <td>Inserts a node as a child, right before an existing child, which you specify</td>        
+    </tr>
+    <tr>
+        <td>lastChild</td>
+        <td>Returns the last child node of the specified node, as a Node object</td>        
+    </tr>
+    <tr>
+        <td>lastElementChild</td>
+        <td>Returns the last child element of the specified element</td>        
+    </tr>
+    <tr>
+        <td>matches</td>
+        <td>Returns a Boolean value indicating whether an element is matched by a specific CSS selector or not</td>        
+    </tr>
+    <tr>
+        <td>nextSibling</td>
+        <td>Returns the node immediately following the specified node, in the same tree level</td>        
+    </tr>
+    <tr>
+        <td>nextElementSibling</td>
+        <td>Returns the element immediately following the specified element, in the same tree level</td>        
+    </tr>
+    <tr>
+        <td>nodeName</td>
+        <td>Returns the name of the specified node</td>        
+    </tr>
+    <tr>
+        <td>nodeValue</td>
+        <td>Sets or returns the node value of the specified node</td>        
+    </tr>
+    <tr>
+        <td>outerHTML</td>
+        <td>Sets or returns the HTML element and all it's content, including the start tag, it's attributes, and the end tag</td>        
+    </tr>
+    <tr>
+        <td>outerText</td>
+        <td>Sets or returns the text content of the specified node</td>        
+    </tr>
+    <tr>
+        <td>parentNode</td>
+        <td>Returns the parent node of the specified node, as a Node object</td>        
+    </tr>
+    <tr>
+        <td>parentElement</td>
+        <td>Returns the parent element of the specified element</td>        
+    </tr>
+    <tr>
+        <td>previousSibling</td>
+        <td>Returns the previous node of the specified node, in the same tree level</td>        
+    </tr>
+    <tr>
+        <td>previousElementSibling</td>
+        <td>Returns the previous element of the specified element, in the same tree level</td>        
+    </tr>
+    <tr>
+        <td>remove</td>
+        <td>Removes the specified element from the DOM</td>        
+    </tr>
+    <tr>
+        <td>removeAttribute</td>
+        <td>Removes the specified attribute from an element</td>        
+    </tr>
+    <tr>
+        <td>removeAttributeNode</td>
+        <td>Removes the specified attribute from an element, and returns the removed attribute, as an Attr Node object</td>        
+    </tr>
+    <tr>
+        <td>removeChild</td>
+        <td>Removes a specified child node of the specified element</td>        
+    </tr>
+    <tr>
+        <td>removeEventListener</td>
+        <td>Removes an event handler that has been attached with the addEventListener() method</td>        
+    </tr>
+    <tr>
+        <td>removeEventListener</td>
+        <td>Removes an event handler that has been attached with the addEventListener() method</td>        
+    </tr>
+    <tr>
+        <td>replaceChild</td>
+        <td>Replaces a child node with a new node</td>        
+    </tr>
+    <tr>
+        <td>setAttribute</td>
+        <td>Adds the specified attribute to an element, and gives it the specified value</td>        
+    </tr>
+    <tr>
+        <td>setAttributeNode</td>
+        <td>Adds the specified attribute node to an element</td>        
+    </tr>
+    <tr>
+        <td>tagName</td>
+        <td>Returns the tag name of the element</td>        
+    </tr>
+    <tr>
+        <td>textContent</td>
+        <td>Sets or returns the text content of the specified node, and all its descendants</td>        
+    </tr>
+    <tr>
+        <td>title</td>
+        <td>Sets or returns the value of the title attribute of an element</td>        
+    </tr>
+</table>
