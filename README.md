@@ -1,9 +1,9 @@
 Table of React JS content
 
-[I. Single Page Application vs Multiple Page Application ]
-[I.1 SPA] 
-[I.2 MPA] 
-[II. JS HTML DOM] 
+[I. Single Page Application vs Multiple Page Application](#i-single-page-application-vs-multiple-page-application)
+[I.1 SPA](#i1-single-page-application) 
+[I.2 MPA](#i2-multiple-page-application) 
+[II. JS HTML DOM](#ii-js-html-dom) 
 [III. JS Browser BOM] 
 [IV. JS APIs] 
 [V. Create an app react js] 
