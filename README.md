@@ -1,5 +1,6 @@
 Table of React JS content
-[I. SPA vs MPA] 
+
+[I. Single Page Application vs Multiple Page Application ]
 [I.1 SPA] 
 [I.2 MPA] 
 [II. JS HTML DOM] 
@@ -8,6 +9,13 @@ Table of React JS content
 [V. Create an app react js] 
 [II1. ] [II2. ] 
 [VI. JSX]
+
+# I. Single Page Application vs Multiple Page Application 
+# I.1 Single Page Application 
+A Single Page Application (SPA) is a web application implementation that loads only a single web document, and then update the body content of that single document via JS APIs such as XMLHttpRequest and Fetch.
+
+# I.2 Multiple Page Application
+A Multiple Page Application (MPA) is the traditional web applications that reload the entire page and displays the new one when a user interacts with the web app. Each time when a data is exchanged back and forth, a new page is requested from the server to display in the web browser.
 
 # II. JS HTML DOM
 When a webpage is loaded, the browser will create a **Document Object Model** called DOM. The HTML elements are ***object***. Each HTML element contains properties and events and is managed by DOM, so the HTML DOM can *get, change, add, or delete* HTML elements.
