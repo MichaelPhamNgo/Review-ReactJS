@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIND HTML ELEMENTS</title>
+</head>
+<body>
+    <div id="ex-id"></div>
+    <div class="ex-class"></div>
+    <div class="ex-class"></div>
+    <div class="ex-class"></div>
+    <h4></h4>
+    <h4></h4>
+    <h4></h4>
+    <h4></h4>
+    <div class="selector1"></div>
+    <div class="selector"></div>
+    <div class="selector2"></div>
+    <p></p>
+    <p></p>
+    <p></p>
+    <script>
+        document.getElementById("ex-id").innerHTML = "Hello getElementById";
+        var exClasses = document.getElementsByClassName("ex-class");
+        for(let exClass of exClasses){
+            exClass.innerHTML = "Hello getElementsByClassName";
+        }    
+        var h4s = document.getElementsByTagName("h4");
+        for(let h4 of h4s){
+            h4.innerHTML = "Hello getElementsByTagName";
+        }       
+        document.querySelector(".selector").innerHTML = "Hello querySelector";
+        var ps = document.querySelectorAll("p");
+        for(let p of ps){
+            p.innerHTML = "Hello querySelectorAll";
+        }   
+    </script>
+</body>
+</html>
