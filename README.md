@@ -41,29 +41,27 @@ When a webpage is loaded, the browser will create a **Document Object Model** ca
 <table>
     <tr>
         <th>Method</th>
-        <th>Description</th>
-        <th>Syntax</th>
+        <th>Description</th>        
     </tr>
     <tr>
-        <td>getElememtById [Click Here]</td>
+        <td>[getElememtById](#getelememtbyid)</td>
         <td>Find an element by element id</td>        
     </tr>
     <tr>
-        <td>document.getElementsByTagName</td>
+        <td>[getElementsByTagName](#getelementsbytagname)</td>
         <td>Find elements by tag name</td>        
     </tr>
     <tr>
-        <td>document.getElementsByClassName</td>
+        <td>[getElementsByClassName](#getelementsbyclassname)</td>
         <td>Find elements by class name</td>        
     </tr>
     <tr>
-        <td>document.querySelector</td>
+        <td>[querySelector](#queryselector)</td>
         <td>Find a selector</td>        
     </tr>
     <tr>
-        <td>document.querySelectorAll</td>
-        <td>Find all selectors</td>
-        <td>document.querySelectorAll(selectors)</td>
+        <td>[querySelectorAll](#queryselectorall)</td>
+        <td>Find all selectors</td>        
     </tr>
 </table>
 
