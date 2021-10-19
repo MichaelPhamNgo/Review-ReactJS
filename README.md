@@ -1,14 +1,18 @@
-Table of React JS content
+# Table of React JS content
 
-[I. Single Page Application vs Multiple Page Application](#i-single-page-application-vs-multiple-page-application)
-[I.1 SPA](#i1-single-page-application) 
-[I.2 MPA](#i2-multiple-page-application) 
-[II. JS HTML DOM](#ii-js-html-dom) 
-[III. JS Browser BOM] 
-[IV. JS APIs] 
-[V. Create an app react js] 
-[II1. ] [II2. ] 
-[VI. JSX]
+- [Table of React JS content](#table-of-react-js-content)
+- [I. Single Page Application vs Multiple Page Application](#i-single-page-application-vs-multiple-page-application)
+- [I.1 Single Page Application](#i1-single-page-application)
+- [I.2 Multiple Page Application](#i2-multiple-page-application)
+- [II. JS HTML DOM](#ii-js-html-dom)
+  - [II.1 Finding HTML Elements](#ii1-finding-html-elements)
+      - [getElememtById](#getelememtbyid)
+      - [getElementsByTagName](#getelementsbytagname)
+      - [getElementsByClassName](#getelementsbyclassname)
+      - [querySelector](#queryselector)
+      - [querySelectorAll](#queryselectorall)
+  - [II.2 Actions on HTML elements](#ii2-actions-on-html-elements)
+  - [See more action events](#see-more-action-events)
 
 # I. Single Page Application vs Multiple Page Application 
 # I.1 Single Page Application 
@@ -41,24 +45,20 @@ When a webpage is loaded, the browser will create a **Document Object Model** ca
         <th>Syntax</th>
     </tr>
     <tr>
-        <td>document.getElememtById</td>
-        <td>Find an element by element id</td>
-        <td>document.getElementById(id)</td>
+        <td>getElememtById [Click Here]</td>
+        <td>Find an element by element id</td>        
     </tr>
     <tr>
         <td>document.getElementsByTagName</td>
-        <td>Find elements by tag name</td>
-        <td>document.getElementsByTagName(name)</td>
+        <td>Find elements by tag name</td>        
     </tr>
     <tr>
         <td>document.getElementsByClassName</td>
-        <td>Find elements by class name</td>
-        <td>document.getElementsByClassName(name)</td>
+        <td>Find elements by class name</td>        
     </tr>
     <tr>
         <td>document.querySelector</td>
-        <td>Find a selector</td>
-        <td>document.querySelector(selector)</td>
+        <td>Find a selector</td>        
     </tr>
     <tr>
         <td>document.querySelectorAll</td>
@@ -67,6 +67,7 @@ When a webpage is loaded, the browser will create a **Document Object Model** ca
     </tr>
 </table>
 
+#### getElememtById
 > Find an element by element id
 
 ***SYNTAX***
@@ -83,6 +84,7 @@ document.getElementById("id")
 document.getElementById("ex-id").innerHTML = "Hello getElementById";
 ```
 
+#### getElementsByTagName
 > Find an element by class name
 
 ***SYNTAX***
@@ -104,6 +106,7 @@ for(let exClass of exClasses){
 }        
 ```
 
+#### getElementsByClassName
 > Find an element by tag name
 
 ***SYNTAX***
@@ -125,6 +128,7 @@ for(let h4 of h4s){
 }     
 ```
 
+#### querySelector
 > Find an element by CSS Selector
 ***SYNTAX***
 ```javascript
@@ -142,6 +146,7 @@ document.querySelector("selector")		//selector can be id, tag, or class
 document.querySelector(".selector").innerHTML = "Hello querySelector";
 ``` 
 
+#### querySelectorAll
 > Find an element by CSS Selectors
 ***SYNTAX***
 ```javascript
