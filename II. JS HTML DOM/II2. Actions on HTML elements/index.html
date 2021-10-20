@@ -22,6 +22,11 @@
             font-size: 24px;
             font-weight: bold;
         }
+
+        #newid {
+            font-size: 24px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -51,6 +56,16 @@
     <button type="button" id="demo-focus">Get focus</button> 
     <button type="button" id="demo-getAttribute">Get Attributes</button>
     <div id="show-attribute"></div>  
+    <button type="button" id="demo-getAttributeNode">Get AttributeNote</button>
+    <div id="show-attribute-node"></div>
+    <button type="button" id="demo-id">Set new id</button>
+    <div id="new-id">Change New ID</div>
+    <div id="demo-innerText"></div>
+    <button type="button" id="demo-insertBefore">Add A Node Before Node 2</button>
+    <ul id="myList-insertBefore">
+        <li>Node 1</li>
+        <li>Node 2</li>
+    </ul>
     <script type="text/javascript">
         //innerHTML example
         document.getElementById("demo-innerHTML").innerHTML = "Hello innerHTML";        
@@ -104,6 +119,34 @@
         document.getElementById("demo-getAttribute").addEventListener("click", function(){            
             var x = document.getElementById("change-class").getAttribute("class");            
             document.getElementById("show-attribute").innerHTML = x;
+        });
+
+        //getAttributeNode example
+        document.getElementById("demo-getAttributeNode").addEventListener("click", function(){
+            var x = document.getElementById("change-class").getAttributeNode("class").value;
+            document.getElementById("show-attribute-node").innerHTML = x;
+        });
+
+        //id example
+        document.getElementById("demo-id").addEventListener("click", function(){
+            document.getElementById("new-id").id = "newid";
+        });
+
+        //innerText example
+        document.getElementById("demo-innerText").innerText = "Change InnerText";
+
+        //innerText example
+        document.getElementById("demo-insertBefore").addEventListener("click", function(){
+            //create node li
+            let node = document.createElement("li");
+            //create text for li node
+            let textNode = document.createTextNode("Node");
+            //add text to li node
+            node.appendChild(textNode);
+            //get list
+            let list = document.getElementById("myList-insertBefore");
+            //Insert Node before last node and
+            document.getElementById("myList-insertBefore").insertBefore(node,list.childNodes[0]);
         });
     </script>
 </body>

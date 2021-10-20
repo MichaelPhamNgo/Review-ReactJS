@@ -22,6 +22,10 @@
     - [className](#classname)
     - [focus](#focus)
     - [getAttribute](#getattribute)
+    - [getAttributeNode](#getattributenode)
+    - [id](#id)
+    - [innerText](#innertext)
+    - [insertBefore](#insertbefore)
 
 # I. Single Page Application vs Multiple Page Application 
 # I.1 Single Page Application 
@@ -418,7 +422,7 @@ element.getAttribute(attributename)
 
 ***EXAMPLE***
 ```html
-<button type="button" id="demo-getAttribute">Get Attributes</button>
+<button type="button" id="demo-getAttribute">Get Attribute</button>
 <div id="show-attribute"></div>
 ```
 ```javascript
@@ -426,6 +430,102 @@ element.getAttribute(attributename)
 document.getElementById("demo-getAttribute").addEventListener("click", function(){
     var x = document.getElementById("change-class").getAttribute("class");
     document.getElementById("show-attribute").innerHTML = x;
+});
+```
+
+### getAttributeNode
+> Gets the attribute node with the specified name of an element, as an Attr object
+
+***SYNTAX***
+```javascript
+element.getAttributeNode(attributename)
+```
+
+***EXAMPLE***
+```html
+<button type="button" id="demo-getAttributeNode">Get AttributeNote</button>
+<div id="show-attribute-node"></div>
+```
+```javascript
+//ex: show attribute node
+document.getElementById("demo-getAttributeNode").addEventListener("click", function(){
+    var x = document.getElementById("change-class").getAttributeNode("class").value;
+    document.getElementById("show-attribute-node").innerHTML = x;
+});
+```
+
+### id
+> Sets or returns the id of an element
+
+***SYNTAX***
+```javascript
+//Sets the id property
+HTMLElementObject.id = id
+//Gets the id property
+HTMLElementObject.id
+```
+
+***EXAMPLE***
+```html
+<button type="button" id="demo-id">Set new id</button>
+<div id="new-id">Change New ID</div>
+```
+```javascript
+//ex: change value of id
+document.getElementById("demo-id").addEventListener("click", function(){
+    document.getElementById("new-id").id = "newid";
+});
+```
+
+### innerText
+> Sets or returns the text content of the specified node, and all its descendants
+
+***SYNTAX***
+```javascript
+//Sets the text content of a node
+node.innerText = text
+//Gets the text content of a node
+node.innerText
+```
+
+***EXAMPLE***
+```html
+<div id="demo-innerText"></div>
+```
+```javascript
+//ex: change value of id
+document.getElementById("demo-innerText").innerText = "Change InnerText";
+```
+
+### insertBefore
+> Inserts a node as a child, right before an existing child, which you specify
+
+***SYNTAX***
+```javascript
+node.insertBefore(newnode, existingnode)
+```
+
+***EXAMPLE***
+```html
+<button type="button" id="demo-insertBefore">Add A Node Before Node 2</button>
+<ul id="myList-insertBefore">
+    <li>Node 1</li>
+    <li>Node 2</li>
+</ul>
+```
+```javascript
+//ex: add li node to ul#myList-appendChild
+document.getElementById("demo-insertBefore").addEventListener("click", function(){
+    //create node li
+    let node = document.createElement("li");
+    //create text for li node
+    let textNode = document.createTextNode("Node");
+    //add text to li node
+    node.appendChild(textNode);
+    //get list
+    let list = document.getElementById("myList-insertBefore");
+    //Insert Node at index 0
+    document.getElementById("myList-insertBefore").insertBefore(node,list.childNodes[0]);
 });
 ```
 
@@ -491,11 +591,7 @@ document.getElementById("demo-getAttribute").addEventListener("click", function(
     <tr>
         <td>insertBefore</td>
         <td>Inserts a the specified element into a specified position</td>        
-    </tr>
-    <tr>
-        <td>insertAdjacentHTML</td>
-        <td>Inserts a node as a child, right before an existing child, which you specify</td>        
-    </tr>
+    </tr>    
     <tr>
         <td>lastChild</td>
         <td>Returns the last child node of the specified node, as a Node object</td>        
