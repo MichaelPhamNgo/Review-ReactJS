@@ -17,6 +17,11 @@
     - [addEventListener](#addeventlistener)
     - [appendChild](#appendchild)
     - [childNodes](#childnodes)
+    - [children](#children)
+    - [classList](#classlist)
+    - [className](#classname)
+    - [focus](#focus)
+    - [getAttribute](#getattribute)
 
 # I. Single Page Application vs Multiple Page Application 
 # I.1 Single Page Application 
@@ -183,7 +188,6 @@ HTMLElementObject.innerHTML = text
 
 // Return the innerHTML property
 HTMLElementObject.innerHTML;
-...
 ```
 
 ***EXAMPLE***
@@ -205,7 +209,6 @@ element.style.property = value
 
 // Return style properties
 element.style.property
-...
 ```
 
 ***EXAMPLE***
@@ -223,7 +226,6 @@ document.getElementById("demo-property").style.color = "blue";
 ***SYNTAX***
 ```javascript
 element.addEventListener(event, function, useCapture)
-...
 ```
 
 ***EXAMPLE***
@@ -243,7 +245,6 @@ document.getElementById("demo-addEventListener").addEventListener("click", funct
 ***SYNTAX***
 ```javascript
 node.appendChild(node)
-...
 ```
 
 ***EXAMPLE***
@@ -274,7 +275,6 @@ document.getElementById("demo-appendChild").addEventListener("click", function()
 ***SYNTAX***
 ```javascript
 element.childNodes
-...
 ```
 
 ***EXAMPLE***
@@ -290,6 +290,142 @@ element.childNodes
 document.getElementById("demo-childNodes").addEventListener("click", function(){
     console.log(document.getElementById("myList-childNodes").childNodes);       
     //NodeList(5) [text, li, text, li, text]
+});
+```
+
+### children
+> A collection of an element's child elements, as an HTMLCollection object
+
+***SYNTAX***
+```javascript
+element.children
+```
+
+***EXAMPLE***
+```html
+<button type="button" id="demo-children">Show list of child nodes</button>
+<ul id="myList-children">
+    <li>Node 1</li>
+    <li>Node 2</li>
+</ul>
+```
+```javascript
+//ex: show children
+document.getElementById("demo-children").addEventListener("click", function(){
+    console.log(document.getElementById("myList-children").children);       
+    //HTMLCollection(2) [li, li]
+});
+```
+
+### classList
+> Show the class name(s) of an element, as a DOMTokenList object
+
+***SYNTAX***
+```javascript
+element.classList
+```
+
+***Methods***
+<table>
+    <tr>
+        <td>Method</td>
+        <td>Description</td>
+    </tr>
+    <tr>
+        <td>add(class1, class2, ...)</td>
+        <td>Adds one or more class names to an element</td>
+    </tr>
+    <tr>
+        <td>contains(class)</td>
+        <td>Returns a Boolean value, indicating whether an element has the specified class name</td>
+    </tr>
+    <tr>
+        <td>item(index)</td>
+        <td>Returns the class name with a specified index number from an element. Index starts at 0</td>
+    </tr>
+    <tr>
+        <td>remove(class1, class2, ...)</td>
+        <td>Removes one or more class names from an element</td>
+    </tr>
+    <tr>
+        <td>toggle(class, true|false)</td>
+        <td>Toggles between a class name for an element</td>
+    </tr>
+</table>
+
+***EXAMPLE***
+```html
+<button type="button" id="demo-classList">Add list css</button>
+<div id="change-class">Add new style(s) for div</div>
+```
+```javascript
+//ex: add css styles for div
+document.getElementById("demo-classList").addEventListener("click", function(){
+    document.getElementById("change-class").classList.add("style1", "style2");
+});
+```
+
+### className
+> Sets or gets the class name of an element
+
+***SYNTAX***
+```javascript
+// Set the className property
+HTMLElementObject.className = class
+// Return the className property
+HTMLElementObject.className
+```
+
+***EXAMPLE***
+```html
+<button type="button" id="demo-className">Add css</button>
+<div id="change-classname">Add new style for div</div>
+```
+```javascript
+//ex: change css
+document.getElementById("demo-className").addEventListener("click", function(){
+    document.getElementById("change-classname").className = "style1";
+});
+```
+
+### focus
+> Gives focus to an element
+
+***SYNTAX***
+```javascript
+HTMLElementObject.focus()
+```
+
+***EXAMPLE***
+```html
+<input type="text" id="myText-focus">
+<button type="button" id="demo-focus">Get focus</button>
+```
+```javascript
+//ex: set focus
+document.getElementById("demo-focus").addEventListener("click", function(){
+    document.getElementById("myText-focus").focus();
+});
+```
+
+### getAttribute
+> Gets the value of the attribute with the specified name, of an element
+
+***SYNTAX***
+```javascript
+element.getAttribute(attributename)
+```
+
+***EXAMPLE***
+```html
+<button type="button" id="demo-getAttribute">Get Attributes</button>
+<div id="show-attribute"></div>
+```
+```javascript
+//ex: show attribute
+document.getElementById("demo-getAttribute").addEventListener("click", function(){
+    var x = document.getElementById("change-class").getAttribute("class");
+    document.getElementById("show-attribute").innerHTML = x;
 });
 ```
 
@@ -329,17 +465,9 @@ document.getElementById("demo-childNodes").addEventListener("click", function(){
         <td>Returns the class name(s) of an element</td>        
     </tr>
     <tr>
-        <td>click</td>
-        <td>Simulates a mouse-click on an element</td>        
-    </tr>
-    <tr>
-        <td>firstChild</td>
-        <td>Returns the first child node of the specified node, as a Node object</td>        
-    </tr>
-    <tr>
-        <td>firstElementChild</td>
-        <td>Returns the first child element of the specified element</td>        
-    </tr>
+        <td>className</td>
+        <td>Sets or returns the class name of an element</td>        
+    </tr>        
     <tr>
         <td>focus</td>
         <td>Give focus to an element</td>        

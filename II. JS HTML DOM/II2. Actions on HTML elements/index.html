@@ -10,6 +10,18 @@
             display: block;
             margin-bottom: 5px;
         }
+
+        .style1 {
+            padding: 20px;
+            text-align: center;
+            background-color: navy;
+        }
+
+        .style2 {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -26,6 +38,19 @@
         <li>Node 1</li>
         <li>Node 2</li>
     </ul>
+    <button type="button" id="demo-children">Show list of child nodes</button>
+    <ul id="myList-children">
+        <li>Node 1</li>
+        <li>Node 2</li>
+    </ul>
+    <button type="button" id="demo-classList">Add list css</button>
+    <div id="change-class">Add new style(s) for div</div>
+    <button type="button" id="demo-className">Add css</button>
+    <div id="change-classname">Add new style for div</div>     
+    <input type="text" id="myText-focus">
+    <button type="button" id="demo-focus">Get focus</button> 
+    <button type="button" id="demo-getAttribute">Get Attributes</button>
+    <div id="show-attribute"></div>  
     <script type="text/javascript">
         //innerHTML example
         document.getElementById("demo-innerHTML").innerHTML = "Hello innerHTML";        
@@ -52,7 +77,33 @@
 
         //childNodes example
         document.getElementById("demo-childNodes").addEventListener("click", function(){
-            console.log(document.getElementById("myList-childNodes").childNodes);
+            console.log(document.getElementById("myList-childNodes").childNodes);       //NodeList(5) [text, li, text, li, text]
+        });
+
+        //children example
+        document.getElementById("demo-children").addEventListener("click", function(){
+            console.log(document.getElementById("myList-children").children);       //HTMLCollection(2) [li, li]
+        });
+
+        //classList example
+        document.getElementById("demo-classList").addEventListener("click", function(){
+            document.getElementById("change-class").classList.add("style1", "style2");
+        });
+
+        //className example
+        document.getElementById("demo-className").addEventListener("click", function(){
+            document.getElementById("change-classname").className = "style1";
+        });       
+        
+        //focus example
+        document.getElementById("demo-focus").addEventListener("click", function(){
+            document.getElementById("myText-focus").focus();
+        });
+
+        //getAttribute example
+        document.getElementById("demo-getAttribute").addEventListener("click", function(){            
+            var x = document.getElementById("change-class").getAttribute("class");            
+            document.getElementById("show-attribute").innerHTML = x;
         });
     </script>
 </body>
